@@ -1,6 +1,5 @@
 require("dotenv").config();
 
-
 const Discord = require("discord.js");
 const client = new Discord.Client({
   partials: ["MESSAGE"],
@@ -20,6 +19,10 @@ client.on("messageDelete", (msg) => {
 client.on("message", (msg) => {
   if (msg.content == "I love Nithionite") {
     msg.react("❤️");
+  }
+
+  if (msg.content == "Hi") {
+    msg.react("Hi there");
   }
 
   if (msg.content === `${BOT_PREFIX}${MOD_ME_COMMAND}`) {
